@@ -35,4 +35,18 @@ public class 缺失数字NC101 {
         return res;
     }
 
+    // 二分法
+    // 变量 i 和 j 分别指向 “右子数组的首位元素” 和 “左子数组的末位元素”
+    public int solve_3(int[] a) {
+        int i = 0, j = a.length - 1;
+        while (i <= j) {
+            int m = (i + j) / 2;
+            if (a[m] == m)
+                i = m + 1;
+            else
+                j = m - 1;
+        }
+        return i;
+    }
+
 }
