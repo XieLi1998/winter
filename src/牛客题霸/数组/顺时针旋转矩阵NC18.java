@@ -16,7 +16,7 @@ public class 顺时针旋转矩阵NC18 {
         }
 
         // 再对每一行以中点为轴进行翻转
-        int mid = n / 2;
+        int mid = n >> 1;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < mid; j++) {
                 int temp = mat[i][j];
